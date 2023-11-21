@@ -1,7 +1,7 @@
 {
   "entryAssembly": "BlazorWASAM",
   "resources": {
-    "hash": "sha256-PPggnVYAMXg08OnanRpNgbxBufH0uYXIqjxxX/15VIA=",
+    "hash": "sha256-6+BuIitcG+0bK/QMVZejTt0nT1wjxBghzc9oyuqvgi0=",
     "runtime": {
       "dotnet.7.0.14.5c7g03mpzl.js": "sha256-jQIp9xGzWxr3GC/F7t90u8ZZP4KuSzx8T9sQl9KHWAA=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -11,7 +11,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "BlazorWASAM.dll": "sha256-9CYXykqfJWtlGBPgWZvgbYMOIjAEQorWGYbbBqToGbI=",
+      "BlazorWASAM.dll": "sha256-Li6nhfM0R+ogz1yPA6yxWHpa5L1k/eAabaht4EY/emY=",
       "HarfBuzzSharp.dll": "sha256-8x2xNDmC3DzJ03I/zVCuE5Xip9g2jj/ai9sLxgKBwSo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-3TCmBvHsUiwWYuhw8pmZlkzv6pyYMFCQHoFM+987WjQ=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-4FvjJHILyvbiEq0bT3KjWKPgw3ybJ3e3dTPFQEKx+qQ=",

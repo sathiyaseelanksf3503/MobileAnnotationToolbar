@@ -1,7 +1,7 @@
 {
   "entryAssembly": "BlazorWASAM",
   "resources": {
-    "hash": "sha256-U4AlQytBkR4FzUamYG1QRjlt+jkfMBMXSKSm7PXL5h0=",
+    "hash": "sha256-CpfnnXbBXH8F8ZKNW1S/62hl6asaTJwU+YynTJX3Xmc=",
     "runtime": {
       "dotnet.7.0.14.5c7g03mpzl.js": "sha256-jQIp9xGzWxr3GC/F7t90u8ZZP4KuSzx8T9sQl9KHWAA=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -46,7 +46,7 @@
       "Syncfusion.Blazor.Navigations.dll": "sha256-mHy8iXX8gl3z+Nq0nhpGhS17qkeyE7SKUeUWd8PW5tM=",
       "Syncfusion.Blazor.Notifications.dll": "sha256-t7E6DC2jX3vQ2IPD1YMgEk8bKZQvDMTXKBzW7FXYpCE=",
       "Syncfusion.Blazor.Popups.dll": "sha256-EJ2gFH+IjW/43KrResK0PK446+p1mdV5cTFYDKRxfoY=",
-      "Syncfusion.Blazor.SfPdfViewer.dll": "sha256-PsdAe7hSMCDmzqNbKf/+oCM4RkW4JEjXX/ktPMPAUWo=",
+      "Syncfusion.Blazor.SfPdfViewer.dll": "sha256-t0sOkOwEC+NqhCRTx4y19smtwS5aGijB+s3C/tBstUI=",
       "Syncfusion.Blazor.Spinner.dll": "sha256-RVnoQJoFZj1m1Ep8QX0vHxUeMD+zJ6knzwv6ordgRsc=",
       "Syncfusion.Blazor.SplitButtons.dll": "sha256-my6pwnFpPbuoroFUZ7r2bphNC6uzSo8Jdrj/d504Be8=",
       "Syncfusion.Blazor.Themes.dll": "sha256-R2SqBqjOdllpxJlTKdO5f4pnVoiaTuR/zSFg1NasIg4=",

@@ -1,7 +1,7 @@
 {
   "entryAssembly": "BlazorWASAM",
   "resources": {
-    "hash": "sha256-e5Kx7J5b8QvA4ngtCRH5f5H8rrXBrLuAHniTb/jsbWo=",
+    "hash": "sha256-U4AlQytBkR4FzUamYG1QRjlt+jkfMBMXSKSm7PXL5h0=",
     "runtime": {
       "dotnet.7.0.14.5c7g03mpzl.js": "sha256-jQIp9xGzWxr3GC/F7t90u8ZZP4KuSzx8T9sQl9KHWAA=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -11,7 +11,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "BlazorWASAM.dll": "sha256-X3J4u5ue654bRV7gtDqFeYcp2CMt9pPeBRMoWaET930=",
+      "BlazorWASAM.dll": "sha256-j5Wpf0OoqCducUfnBOJJaBKfJJ4qXFpzNtHevCbWdzA=",
       "HarfBuzzSharp.dll": "sha256-8x2xNDmC3DzJ03I/zVCuE5Xip9g2jj/ai9sLxgKBwSo=",
       "Microsoft.AspNetCore.Components.dll": "sha256-3TCmBvHsUiwWYuhw8pmZlkzv6pyYMFCQHoFM+987WjQ=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-4FvjJHILyvbiEq0bT3KjWKPgw3ybJ3e3dTPFQEKx+qQ=",
@@ -46,7 +46,7 @@
       "Syncfusion.Blazor.Navigations.dll": "sha256-mHy8iXX8gl3z+Nq0nhpGhS17qkeyE7SKUeUWd8PW5tM=",
       "Syncfusion.Blazor.Notifications.dll": "sha256-t7E6DC2jX3vQ2IPD1YMgEk8bKZQvDMTXKBzW7FXYpCE=",
       "Syncfusion.Blazor.Popups.dll": "sha256-EJ2gFH+IjW/43KrResK0PK446+p1mdV5cTFYDKRxfoY=",
-      "Syncfusion.Blazor.SfPdfViewer.dll": "sha256-dmV0GTrG4COsCVw5909kfXYCYE4nnkSCjoIRMce/TeI=",
+      "Syncfusion.Blazor.SfPdfViewer.dll": "sha256-PsdAe7hSMCDmzqNbKf/+oCM4RkW4JEjXX/ktPMPAUWo=",
       "Syncfusion.Blazor.Spinner.dll": "sha256-RVnoQJoFZj1m1Ep8QX0vHxUeMD+zJ6knzwv6ordgRsc=",
       "Syncfusion.Blazor.SplitButtons.dll": "sha256-my6pwnFpPbuoroFUZ7r2bphNC6uzSo8Jdrj/d504Be8=",
       "Syncfusion.Blazor.Themes.dll": "sha256-R2SqBqjOdllpxJlTKdO5f4pnVoiaTuR/zSFg1NasIg4=",

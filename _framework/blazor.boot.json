@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "NewPrintPreview",
   "resources": {
-    "hash": "sha256-S/QO6i/VVpgcqhgqZPZmRUyMfM5iV6Rb/r2pERF178s=",
+    "hash": "sha256-82o2rkOKUYXF8XsBIAsjRnza/zqU2j+6gdLjHUxJ9Sk=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-+xHR9FG8pWt+0yCkHuAJO2LE5izmx7KRkaSaVRTeFJ4="
     },
@@ -41,7 +41,7 @@
       "Microsoft.Win32.Primitives.wasm": "sha256-7csf78rUq8nuPsdk/z/KClNJvEIp2V7fNwkNVK8GnsU=",
       "mscorlib.wasm": "sha256-HUly1CjkzOZA4HU6Mdc0ck/XNoYKABVGvaE37O9BYnA=",
       "netstandard.wasm": "sha256-Bb08n/Bsv1T5eOzI+1bOUIWdn+sBhRO6TXVG5zi74ZQ=",
-      "NewPrintPreview.wasm": "sha256-IIhN584NbK7pr0Zj0WnhHyu25WuP2Df5TcU/dfObNmY=",
+      "NewPrintPreview.wasm": "sha256-RX/+YypttdtE4WLdiBezotLJt5nBHnlJoaU8MjCsBQo=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
       "SkiaSharp.HarfBuzz.wasm": "sha256-x7CC3/T8C4kVfJVjzfoJXfOFQu1PYw51wu1EkLunFZ0=",
       "SkiaSharp.Views.Blazor.wasm": "sha256-eV3F6NH5/nfLcQMQAloe6sGD4/VtH983nxzPYykRU30=",

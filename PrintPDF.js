@@ -86,87 +86,119 @@ function printSameWindow(byteArray, issplit = false) {
     }, 60000);
 }
 
+// function printNewWindow(byteArray, fileName = 'document.pdf', issplit = false) {
+//     var blobUrl;
+//     if (issplit) {
+//         let newByteArray = new Uint8Array(this.fileByteArray.length + byteArray.length);
+//         newByteArray.set(this.fileByteArray, 0);
+//         newByteArray.set(new Uint8Array(byteArray), this.fileByteArray.length);
+//         this.fileByteArray = newByteArray;
+//         const BlobFile = new Blob([new Uint8Array(this.fileByteArray)], { type: 'application/pdf' });
+//         blobUrl = URL.createObjectURL(BlobFile);
+//     }
+//     else {
+//         const BlobFile = new Blob([new Uint8Array(byteArray)], { type: 'application/pdf' });
+//         blobUrl = URL.createObjectURL(BlobFile);
+//     }
+
+//     // Detect if the device is an iPad
+//     const isIpad = /iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
+
+//     if (isIpad) {
+//         // Open PDF directly in a new tab for iPad
+//         const newTab = window.open(blobUrl, '_blank');
+//         if (!newTab) {
+//             alert("Please allow pop-ups for this site.");
+//             return;
+//         }
+//     } else {
+//         const screenWidth = window.screen.availWidth;
+//         const screenHeight = window.screen.availHeight;
+
+//         const printWindow = window.open('', fileName, `width=${screenWidth},height=${screenHeight},top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no`);
+
+//         if (!printWindow) {
+//             alert("Please allow pop-ups for this site.");
+//             return;
+//         }
+
+//         const htmlContent = `
+//             <!DOCTYPE html>
+//             <html>
+//             <head>
+//                 <title>${fileName}</title>
+//                 <style>
+//                     html, body {
+//                         margin: 0;
+//                         padding: 0;
+//                         height: 100%;
+//                         overflow: hidden;
+//                     }
+//                     iframe {
+//                         width: 100%;
+//                         height: 100%;
+//                         border: none;
+//                     }
+//                 </style>
+//             </head>
+//             <body>
+//                 <iframe id="pdfFrame" src="${blobUrl}#view=FitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
+//                 <script>
+//                     const iframe = document.getElementById('pdfFrame');
+//                     iframe.onload = function () {
+//                         setTimeout(() => {
+//                             iframe.contentWindow.focus();
+//                             iframe.contentWindow.print();
+//                         }, 500);
+//                     };
+
+//                     // Notify parent when printing is done
+//                     window.onafterprint = function () {
+//                         window.close();
+//                     };
+//                 </script>
+//             </body>
+//             </html>
+//         `;
+
+//         printWindow.document.open();
+//         printWindow.document.write(htmlContent);
+//         printWindow.document.close();
+
+//         setTimeout(() => {
+//             URL.revokeObjectURL(blobUrl);
+//         }, 60000);
+//     }
+// }
+
 function printNewWindow(byteArray, fileName = 'document.pdf', issplit = false) {
-    var blobUrl;
-    if (issplit) {
-        let newByteArray = new Uint8Array(this.fileByteArray.length + byteArray.length);
-        newByteArray.set(this.fileByteArray, 0);
-        newByteArray.set(new Uint8Array(byteArray), this.fileByteArray.length);
-        this.fileByteArray = newByteArray;
-        const BlobFile = new Blob([new Uint8Array(this.fileByteArray)], { type: 'application/pdf' });
-        blobUrl = URL.createObjectURL(BlobFile);
-    }
-    else {
-        const BlobFile = new Blob([new Uint8Array(byteArray)], { type: 'application/pdf' });
-        blobUrl = URL.createObjectURL(BlobFile);
-    }
+    function printNewWindow(byteArray, fileName = 'document.pdf', issplit = false) {
+        const blob = new Blob([byteArray], { type: 'application/pdf' });
+        // Create object URL
+        const blobUrl = URL.createObjectURL(blob);
 
-    // Detect if the device is an iPad
-    const isIpad = /iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
-
-    if (isIpad) {
-        // Open PDF directly in a new tab for iPad
-        const newTab = window.open(blobUrl, '_blank');
-        if (!newTab) {
-            alert("Please allow pop-ups for this site.");
-            return;
-        }
-    } else {
-        const screenWidth = window.screen.availWidth;
-        const screenHeight = window.screen.availHeight;
-
-        const printWindow = window.open('', fileName, `width=${screenWidth},height=${screenHeight},top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no`);
+        // Open new window with the blob URL
+        const printWindow = window.open(blobUrl, '_blank');
 
         if (!printWindow) {
-            alert("Please allow pop-ups for this site.");
+            alert("Failed to open the PDF. Please allow pop-ups for this site.");
             return;
         }
 
-        const htmlContent = `
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>${fileName}</title>
-                <style>
-                    html, body {
-                        margin: 0;
-                        padding: 0;
-                        height: 100%;
-                        overflow: hidden;
-                    }
-                    iframe {
-                        width: 100%;
-                        height: 100%;
-                        border: none;
-                    }
-                </style>
-            </head>
-            <body>
-                <iframe id="pdfFrame" src="${blobUrl}#view=FitH&toolbar=0&navpanes=0&scrollbar=0"></iframe>
-                <script>
-                    const iframe = document.getElementById('pdfFrame');
-                    iframe.onload = function () {
-                        setTimeout(() => {
-                            iframe.contentWindow.focus();
-                            iframe.contentWindow.print();
-                        }, 500);
-                    };
+        const tryPrint = () => {
+            printWindow.focus();
+            printWindow.print();
+        };
 
-                    // Notify parent when printing is done
-                    window.onafterprint = function () {
-                        window.close();
-                    };
-                </script>
-            </body>
-            </html>
-        `;
+        // Try printing on load event (works in Chrome and Edge)
+        printWindow.addEventListener('load', tryPrint);
 
-        printWindow.document.open();
-        printWindow.document.write(htmlContent);
-        printWindow.document.close();
+        // Fallback for Firefox: try printing after a delay
+        setTimeout(tryPrint, 3000);
 
+        // Clean up the object URL after a delay
         setTimeout(() => {
             URL.revokeObjectURL(blobUrl);
-        }, 60000);
+        }, 60000); // Clean up after 1 minute
     }
 }
